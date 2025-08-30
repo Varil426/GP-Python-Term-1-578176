@@ -1,8 +1,3 @@
-test = 123
+wartosc_pobrana_od_uzytkownika = input("Podaj liczbę: ")
 
-print(test)
-print(type(test))
-
-test = "Hello"
-print(test)
-print(type(test))
+print(wartosc_pobrana_od_uzytkownika, type(wartosc_pobrana_od_uzytkownika))
