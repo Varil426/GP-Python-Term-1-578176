@@ -1,1 +1,2 @@
-print(4 != 4.0)
+print("\"x\"")
+print('"x"')
