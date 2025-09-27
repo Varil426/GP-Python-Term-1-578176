@@ -1,2 +1,1 @@
-print("\"x\"")
-print('"x"')
+print(int("0123"))
