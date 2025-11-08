@@ -1,8 +1,5 @@
-a = 10
+liczba = 123
+tekst = str(liczba)
 
-def test(a):
-    print(a)
-
-print(a)
-test(100)
-print(a)
+for znak in tekst:
+    print(znak)
