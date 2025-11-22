@@ -1,5 +1,2 @@
-liczba = 123
-tekst = str(liczba)
-
-for znak in tekst:
-    print(znak)
+print(max(10, 12))
+print(min(10, 12))
