@@ -7,8 +7,11 @@ Wersja rozszerzona: funkcja powinna ignorować wielkość liter oraz spacje.
 
 
 def czy_palindrom(text):
-    # TODO
-    pass
+    odwrocony = text[::-1]
+    if text == odwrocony:
+        print(f"{text} jest palindromem")
+    else:
+        print(f"{text} nie jest palindromem")
 
 
 # Testy

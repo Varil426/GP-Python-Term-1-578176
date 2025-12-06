@@ -4,10 +4,13 @@ Funkcja ma wyświetlić ile wynosi podana liczba w zapisie binarnym.
 """
 
 
-def binary(a):
-    # TODO
-    pass
-
+def binary(a: int):
+    wynik = ''
+    while(a>0):
+        cyfra = a % 2
+        a = a // 2
+        wynik = str(cyfra) + wynik
+    return wynik
 
 # Testy
 if __name__ == "__main__":

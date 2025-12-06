@@ -2,12 +2,12 @@
 Napisz drugą funkcję, która ma wyświetlić wszystkie liczby pierwsze z podanego
 przedziału (możesz wykorzystać do tego funkcję, którą już napisałeś) w poprzednim zadaniu.
 """
-
+from ex3 import czy_liczba_jest_pierwsza
 
 def generuj_pierwsze(a, b):
-    # TODO
-    pass
-
+    for i in range(a, b+1):
+        if czy_liczba_jest_pierwsza(i):
+            print(i)
 
 # Testy
 if __name__ == "__main__":
