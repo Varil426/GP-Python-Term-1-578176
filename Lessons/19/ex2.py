@@ -11,3 +11,9 @@ Dla liczby 6 powinien wyglądać tak:
 5 5 5 5 5
 6 6 6 6 6 6
 """
+
+podana_liczba = int(input("Podaj liczbę: "))
+
+for i in range(1, podana_liczba + 1):
+    # print(f"{str(i)} " * i)
+    print((str(i) + " ") * i)
