@@ -3,6 +3,8 @@ import random
 import time
 import os
 from Jablko import Jablko
+from Waz import Waz
+from Kierunek import Kierunek
 
 # Ustawienie katalogu roboczego
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -37,16 +39,31 @@ for i in range(1):
     jablko = Jablko()
     jablka.add(jablko)
 
+waz = Waz()
+PORUSZ_WEZEM = pygame.USEREVENT + 1
+pygame.time.set_timer(PORUSZ_WEZEM, 200)
+
 gra_dziala = True
 while gra_dziala:
     for zdarzenie in pygame.event.get():
         if zdarzenie.type == pygame.KEYDOWN:
             if zdarzenie.key == pygame.K_ESCAPE:
                 gra_dziala = False
+            if zdarzenie.key == pygame.K_w:
+                waz.zmien_kierunek(Kierunek.GORA)
+            if zdarzenie.key == pygame.K_d:
+                waz.zmien_kierunek(Kierunek.PRAWO)
+            if zdarzenie.key == pygame.K_s:
+                waz.zmien_kierunek(Kierunek.DOL)
+            if zdarzenie.key == pygame.K_a:
+                waz.zmien_kierunek(Kierunek.LEWO)
+        elif zdarzenie.type == PORUSZ_WEZEM:
+            waz.aktualizuj()
         elif zdarzenie.type == pygame.QUIT:
             gra_dziala = False
 
     ekran.blit(tlo, (0,0))
+    ekran.blit(waz.obraz, waz.rect)
     for jablko in jablka:
         ekran.blit(jablko.obraz, jablko.rect)
 
