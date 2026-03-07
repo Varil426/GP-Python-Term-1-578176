@@ -62,10 +62,17 @@ while gra_dziala:
         elif zdarzenie.type == pygame.QUIT:
             gra_dziala = False
 
+    kolzja_z_jablkiem = pygame.sprite.spritecollideany(waz, jablka)
+    if kolzja_z_jablkiem != None:
+        kolzja_z_jablkiem.kill()
+        waz.jedz_jablko()
+        jablka.add(Jablko())
+
     ekran.blit(tlo, (0,0))
     ekran.blit(waz.obraz, waz.rect)
     for jablko in jablka:
         ekran.blit(jablko.obraz, jablko.rect)
+    waz.rysuj_segmenty(ekran)
 
     pygame.display.flip()
     zegar.tick(30)
