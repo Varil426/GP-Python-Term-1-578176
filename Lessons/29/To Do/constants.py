@@ -1,0 +1,3 @@
+# Wysokość i szerokość ekranu
+SZEROKOSC_EKRANU = 1024
+WYSOKOSC_EKRANU = 800
