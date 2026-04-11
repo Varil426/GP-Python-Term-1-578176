@@ -3,31 +3,30 @@ class Queue:
         self.queue = []
 
     def is_empty(self):
-        # TODO
-        pass
+        return len(self.queue) == 0
 
     def enqueue(self, item):
-        # TODO
-        pass
+        self.queue.append(item)
 
     def dequeue(self):
-        # TODO
-        pass
+        if not self.is_empty():
+            return self.queue.pop(0)
 
     def peek(self):
-        # TODO
-        pass
+        if not self.is_empty():
+            return self.queue[0]
 
 
 # Testy
-queue = Queue()
+if __name__ == '__main__':
+    queue = Queue()
 
-queue.enqueue(1)
-queue.enqueue(2)
-queue.enqueue(3)
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
 
-print(queue.dequeue())  # 1
-print(queue.dequeue())  # 2
-print(queue.is_empty())  # False
-print(queue.dequeue())  # 3
-print(queue.is_empty())  # True
+    print(queue.dequeue())  # 1
+    print(queue.dequeue())  # 2
+    print(queue.is_empty())  # False
+    print(queue.dequeue())  # 3
+    print(queue.is_empty())  # True
